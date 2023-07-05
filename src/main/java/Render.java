@@ -9,11 +9,15 @@ public class Render {
     public void showIndicator(Object object) {
 
         if (object instanceof HasHealth) {
-            ((HasHealth) object).HealthBar();
+            int maxHealth = ((HasHealth) object).getMaxHealthPoint();
+            int currentHealth = ((HasHealth) object).getCurrentHealthPoint();
+            System.out.println("Здоровье: " + currentHealth + "/" + maxHealth);
         }
 
         if (object instanceof HasMana) {
-            ((HasMana) object).ManaBar();
+            int maxMana = ((HasMana) object).getMaxManaPoint();
+            int currentMana = ((HasMana) object).getCurrentManaPoint();
+            System.out.println("Энергия: " + currentMana + "/" + maxMana);
         }
 
     }

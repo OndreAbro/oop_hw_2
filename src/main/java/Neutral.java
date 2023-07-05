@@ -17,7 +17,12 @@ public class Neutral implements HasHealth {
     }
 
     @Override
-    public void HealthBar() {
-        System.out.println("Здоровье персонажа: " + currentHealthPoint + "/" + maxHealthPoint);
+    public int getMaxHealthPoint() {
+        return maxHealthPoint;
+    }
+
+    @Override
+    public int getCurrentHealthPoint() {
+        return currentHealthPoint;
     }
 }

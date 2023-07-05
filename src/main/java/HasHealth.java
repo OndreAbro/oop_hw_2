@@ -1,5 +1,7 @@
 public interface HasHealth {
 
-    void HealthBar();
+    int getMaxHealthPoint();
+
+    int getCurrentHealthPoint();
 
 }

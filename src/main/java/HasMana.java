@@ -1,5 +1,7 @@
 public interface HasMana {
 
-    void ManaBar();
+    int getMaxManaPoint();
+
+    int getCurrentManaPoint();
 
 }

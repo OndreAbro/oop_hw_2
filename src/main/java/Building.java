@@ -15,9 +15,13 @@ public class Building implements HasHealth {
             throw new IllegalArgumentException("Здоровье не может быть отрицательным!");
         }
     }
+    @Override
+    public int getMaxHealthPoint() {
+        return maxHealthPoint;
+    }
 
     @Override
-    public void HealthBar() {
-        System.out.println("Здоровье строения: " + currentHealthPoint + "/" + maxHealthPoint);
+    public int getCurrentHealthPoint() {
+        return currentHealthPoint;
     }
 }

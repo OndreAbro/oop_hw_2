@@ -29,14 +29,23 @@ public class Hero implements HasHealth, HasMana {
             throw new IllegalArgumentException("Энергия не может быть отрицательной!");
         }
     }
-
     @Override
-    public void HealthBar() {
-        System.out.println("Здоровье героя: " + currentHealthPoint + "/" + maxHealthPoint);
+    public int getMaxHealthPoint() {
+        return maxHealthPoint;
     }
 
     @Override
-    public void ManaBar() {
-        System.out.println("Энергия героя: " + currentManaPoint + "/" + maxManaPoint);
+    public int getCurrentHealthPoint() {
+        return currentHealthPoint;
+    }
+
+    @Override
+    public int getMaxManaPoint() {
+        return maxManaPoint;
+    }
+
+    @Override
+    public int getCurrentManaPoint() {
+        return currentManaPoint;
     }
 }
